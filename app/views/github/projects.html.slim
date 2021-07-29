@@ -1,0 +1,17 @@
+body
+    .container
+        - if @error.present?
+            p "#{@error}"
+        - else
+            TABLE#cases_review_forms.table.striped
+                THEAD
+                  TR
+                    TH Name
+                    TH Description
+                TBODY
+                    - @all.each do |r|
+                        TR
+                            TD = r["name"]
+                            TD = r["description"]
+br
+== render 'footer'

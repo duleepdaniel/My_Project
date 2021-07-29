@@ -1,0 +1,46 @@
+body
+  .container
+    .row
+      .col-md-5.mx-auto
+        .myform.form
+          .logo.mb-3
+            .col-md-12.text-center
+              h1 
+                | Welcome!
+                br
+                | Enter your Github username
+          form action="projects" method="get" name="login" 
+            .form-group
+              input#username.form-control aria-describedby="usernameHelp" name="username" placeholder=("Enter your Github username") type="text" required="true"
+            .col-md-12.text-center
+              button.btn.btn-block.btn-primary.mt-4 type="submit"  Login
+          p.text-center -- or --
+          form action="top10" method="get" name="trending" 
+            .col-md-12.text-center
+              button.btn.btn-block.btn-primary Check-out Trending
+scss:
+  body
+  {
+    padding-top:4.2rem;
+		padding-bottom:4.2rem;
+		background:rgba(0, 0, 0, 0.76);
+  }
+  a{
+   text-decoration:none !important;
+  }
+  .myform{
+	  position: relative;
+	  display: -ms-flexbox;
+	  display: flex;
+	  padding: 1rem;
+	  -ms-flex-direction: column;
+	  flex-direction: column;
+	  width: 100%;
+	  pointer-events: auto;
+	  background-color: #fff;
+	  background-clip: padding-box;
+	  border: 1px solid rgba(0,0,0,.2);
+	  border-radius: 1.1rem;
+	  outline: 0;
+	  max-width: 500px;
+  }

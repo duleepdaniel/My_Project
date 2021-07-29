@@ -1,0 +1,24 @@
+== render 'header'
+br
+h1 These are the Top 10 Repos in Ruby Language
+body
+    .container.table_costumed
+        TABLE.table.striped
+            THEAD
+              TR
+                TH Name
+                TH Description
+            TBODY
+                - @all.each do |r|
+                    TR
+                        TD = r["name"]
+                        TD = r["description"]
+
+br
+== render 'footer'
+scss:
+    .table_costumed{
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
